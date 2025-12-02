@@ -1,0 +1,7 @@
+<h1>Edycja produktu</h1>
+<form action="<?= $router->generatePath('product-edit', ['id' => $product->getId()]) ?>" method="post">
+    <label>Nazwa: <input type="text" name="name" value="<?= $product->getName() ?>"></label><br>
+    <label>Cena: <input type="text" name="price" value="<?= $product->getPrice() ?>"></label><br>
+    <label>Opis: <textarea name="description"><?= $product->getDescription() ?></textarea></label><br>
+    <input type="submit" value="Zapisz">
+</form>

@@ -1,0 +1,4 @@
+<h1><?= $product->getName() ?></h1>
+<p>Cena: <?= $product->getPrice() ?> PLN</p>
+<p>Opis: <?= $product->getDescription() ?></p>
+<a href="<?= $router->generatePath('product-index') ?>">Powrót</a>

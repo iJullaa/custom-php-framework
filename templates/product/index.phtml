@@ -1,0 +1,13 @@
+<h1>Lista Produktów</h1>
+<a href="<?= $router->generatePath('product-create') ?>">Dodaj produkt</a>
+<ul>
+    <?php foreach ($products as $product): ?>
+        <li>
+            <?= $product->getName() ?> (<?= $product->getPrice() ?> PLN)
+            <a href="<?= $router->generatePath('product-show', ['id' => $product->getId()]) ?>">Pokaż</a>
+            <a href="<?= $router->generatePath('product-edit', ['id' => $product->getId()]) ?>">Edytuj</a>
+            <a href="<?= $router->generatePath('product-delete', ['id' => $product->getId()]) ?>">Usuń</a>
+        </li>
+    <?php endforeach; ?>
+</ul>
+<a href="<?= $router->generatePath('post-index') ?>">Wróć do Postów</a>

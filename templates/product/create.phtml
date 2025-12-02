@@ -1,0 +1,7 @@
+<h1>Nowy produkt</h1>
+<form action="<?= $router->generatePath('product-create') ?>" method="post">
+    <label>Nazwa: <input type="text" name="name"></label><br>
+    <label>Cena: <input type="text" name="price"></label><br>
+    <label>Opis: <textarea name="description"></textarea></label><br>
+    <input type="submit" value="Zapisz">
+</form>
